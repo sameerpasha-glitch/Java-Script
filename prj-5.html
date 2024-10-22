@@ -1,0 +1,46 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-gradient-to-r from-[#243c5a] to-red-500">
+    <marquee
+      behavior=""
+      direction="left"
+      class="text-3xl text-white bg-gradient-to-r from-indigo-400 to-black"
+      >Pokemon Names: ---
+      "bulbasaur","ivysaur","raticate","rattata","pidgeot","pidgeotto","pidgey","beedrill","kakuna","weedle","butterfree","metapod","caterpie",:"blastoise","wartortle","squirtle","charizard","charmeleon","charmander","venusaur".
+    </marquee>
+    <div class="ml-[40rem] mt-[16rem]">
+      <h1
+        class="text-4xl text-orange-500 text-center shadow-lg mr-[34rem] shadow-violet-50 hover:transition ease-in-out hover:-translate-y-2 cursor-pointer">
+        Pokemon Go...
+      </h1>
+      <input
+        id="search"
+        type="text"
+        placeholder="Enter Pokemon Name..."
+        class="border border-black mt-8 text-center ml-[3rem] shadow-md" />
+      <button
+        id="submit"
+        class="ml-4 border p-2 rounded-full bg-indigo-500 font-bold text-white hover:bg-fuchsia-500">
+        Search
+      </button>
+      <img
+        src=""
+        alt="pokemon.img"
+        loading="lazy"
+        width="200px"
+        height="200px"
+        class="mt-8 ml-[6rem] border border-white p-2"
+        id="jpg"
+        style="display: none" />
+    </div>
+    <script src="5.js"></script>
+  </body>
+</html>
