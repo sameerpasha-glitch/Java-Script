@@ -5,24 +5,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
+    <title>Pokemon</title>
     <link rel="stylesheet" href="output.css" />
-    <link href="/your-path-to-uicons/css/uicons-brands.css" rel="stylesheet" />
   </head>
-  <body class="bg-green-300 to-white ">
-    <h1 class="text-3xl text-center text-white mt-32">Weather App</h1>
-    <div class="flex">
-    <input
-      type="search"
-      placeholder="Enter City Name..."
-      spellcheck="false"
-      class="rounded-lg p-1 w-64 ml-[40rem] mt-12 border-2px border-black" />
-    <button class="border bg-white cursor-pointer p-4 rounded-2xl ml-4 mt-12" style="
-        background-image: url(Social-Media-Svg/search.png);
-        background-repeat: no-repeat;
-        background-position: 7px 8px;
-        background-size: 15px 15px;
-      " /></button></div>
-      <img src="Social-Media-Svg/clouds.png" alt="">
+  <body class="bg-gradient-to-r from-[#243c5a] to-red-500">
+    <marquee
+      behavior=""
+      direction="left"
+      class="text-3xl text-white bg-gradient-to-r from-indigo-400 to-black"
+      >Pokemon Names: ---
+      "bulbasaur","ivysaur","raticate","rattata","pidgeot","pidgeotto","pidgey","beedrill","kakuna","weedle","butterfree","metapod","caterpie",:"blastoise","wartortle","squirtle","charizard","charmeleon","charmander","venusaur".
+    </marquee>
+    <div class="ml-[40rem] mt-[16rem]">
+      <h1
+        class="text-4xl text-orange-500 text-center shadow-lg mr-[34rem] shadow-violet-50 hover:transition ease-in-out hover:-translate-y-2 cursor-pointer">
+        Pokemon Go...
+      </h1>
+      <input
+        id="search"
+        type="text"
+        placeholder="Enter Pokemon Name..."
+        class="border border-black mt-8 text-center ml-[3rem] shadow-md" />
+      <button
+        id="submit"
+        class="ml-4 border p-2 rounded-full bg-indigo-500 font-bold text-white hover:bg-fuchsia-500">
+        Search
+      </button>
+      <img
+        src=""
+        alt="pokemon.img"
+        loading="lazy"
+        width="200px"
+        height="200px"
+        class="mt-8 ml-[6rem] border border-white p-2"
+        id="jpg"
+        style="display: none" />
+    </div>
+    <script src="5.js"></script>
   </body>
 </html>

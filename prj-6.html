@@ -5,19 +5,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
-    <link rel="stylesheet" href="6.css" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="output.css" />
   </head>
-  <body>
-    <form class="weatherForm">
-      <h1>Weather App</h1>
+  <body class="bg-gradient-to-l from-cyan-500 to-violet-500">
+    <div class="border rounded-2xl ml-[30rem] mr-[30rem] mt-16">
+      <section class="">
+        <h2 class="text-2xl flex p-4 ml-[12rem] text-red-600">
+          To-Do List
+          <img src="image.png" alt="" width="25px" class="ml-3" />
+        </h2>
+        <section class="flex pb-14" id="add">
+          <input
+            type="search"
+            id="inpo"
+            placeholder="Add Your Task..."
+            style="font-size: x-large; border-radius: 30px 3px"
+            class="rounded-full ml-[8rem] p-2" />
+          <button
+            id="but"
+            class="border bg-orange-500 text-white p-2"
+            style="border-radius: 13px 4px; margin-left: -2rem">
+            Add
+          </button>
+        </section>
+      </section>
 
-      <input type="text" class="cityInput" placeholder="Enter city" />
-      <button type="submit">Get Weather</button>
-    </form>
+      <ul
+        id="taskList"
+        class="mt-8 text-xl text-white text-center ml-20 mb-4 mr-20"></ul>
+    </div>
 
-    <div class="card" style="display: none"></div>
-
-    <script src="6.js"></script>
+    <script src="7.js"></script>
   </body>
 </html>

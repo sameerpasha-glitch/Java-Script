@@ -14,11 +14,10 @@ weatherForm.addEventListener("submit", async (event) => {
       const weatherData = await getWeatherData(city);
       displayWeatherInfo(weatherData);
     } catch (error) {
-      console.error(error);
       displayError(error);
     }
   } else {
-    displayError("Please enter a city");
+    displayError("Enter a City Name");
   }
 });
 
