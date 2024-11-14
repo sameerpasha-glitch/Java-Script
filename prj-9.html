@@ -1,0 +1,49 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet" />
+  </head>
+  <body class="bg-red-500 flex items-center justify-center h-screen">
+    <div class="bg-white rounded-lg shadow-lg p-10 max-w-md text-center">
+      <p id="p" class="text-lg font-semibold text-gray-800 mb-4 hidden"></p>
+      <button
+        id="but"
+        class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition duration-300">
+        Get Quote
+      </button>
+    </div>
+
+    <script>
+      const quote = document.getElementById("p");
+      const button = document.getElementById("but");
+      const url = "https://dummyjson.com/quotes";
+
+      button.addEventListener("click", async () => {
+        try {
+          const resp = await fetch(url);
+          const data = await resp.json();
+          const randomQuote =
+            data.quotes[Math.floor(Math.random() * data.quotes.length)];
+
+          quote.style.display = "block";
+          quote.textContent = `"${randomQuote.quote}"`;
+
+          quote.style.color =
+            "#" + Math.floor(Math.random() * 16777215).toString(16);
+        } catch (error) {
+          console.error("Error fetching quote:", error);
+          quote.textContent = "Failed to fetch a quote.";
+          quote.style.display = "block";
+          quote.style.color = "red";
+        }
+      });
+    </script>
+  </body>
+</html>

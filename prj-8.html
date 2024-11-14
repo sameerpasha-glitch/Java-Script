@@ -1,0 +1,40 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joke-Generator</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="bg-yellow-500">
+    <div
+      class="bg-black ml-[35rem] mr-[35rem] mt-[15rem] text-center rounded-lg shadow-lg shadow-slate-300">
+      <h2 class="text-8xl mt-4">😂</h2>
+      <p class="text-white mt-12 font-mono overflow-hidden" id="cont">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus cum
+        iusto modi impedit ratione cupiditate rerum eius, officia quibusdam,
+        quasi laborum esse et. Dolorum aperiam incidunt enim! Libero, dicta
+        minima.
+      </p>
+      <button
+        class="bg-white p-2 pl-4 pr-4 rounded-xl hover:bg-yellow-500 mt-4 mb-8">
+        Get Random Joke
+      </button>
+    </div>
+  </body>
+  <script>
+    const jokeElement = document.getElementById("cont");
+    jokeElement.style.display = "none";
+    const buttonElement = document.querySelector("button");
+    const url =
+      "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
+    buttonElement.addEventListener("click", async () => {
+      const resp = await fetch(url);
+      const result = await resp.json();
+      jokeElement.style.display = "block";
+      jokeElement.textContent = result.joke;
+    });
+  </script>
+</html>
